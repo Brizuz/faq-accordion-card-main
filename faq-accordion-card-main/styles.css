@@ -1,0 +1,262 @@
+:root{
+
+    /* text */
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    /* background gradient*/
+
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    /* dividers */
+
+    --light-grayish-blue: hsl(240, 5%, 91%);
+
+}
+
+*{
+    transition: 500ms;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.container{
+    width: 1008px;
+    height: 60%;
+    background-color: white;
+    position: absolute;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-auto-columns: 1fr;
+    z-index: 0;
+    box-shadow: 0px 33px 30px -16px rgba(0,0,0,0.45);
+}
+
+.container-img{
+    display: grid;
+}
+
+.container-hidden{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.container-text{
+    grid-column: 2;
+    font-family: 'Kumbh Sans', sans-serif;
+    float: left;
+    display: flex;
+    padding: 0%;
+    
+}
+
+#woman-mobile, #back-mobile{
+    display: none;
+}
+
+#cube{
+    position: absolute;
+    top: 230px;
+    left: -93px;
+    z-index: 3;
+}
+
+#back{
+    position: absolute;
+    top: -250px;
+    left: -572px;
+    z-index: 1;
+
+}
+
+#woman{
+    position: absolute;
+    top: 93px;
+    left: -80px;
+    z-index: 2;
+}
+
+.accordion{
+    margin-top: 20px;
+    font-size: 13px;
+    max-width: 400px;
+}
+
+.FAQ{
+    padding: 0px 7px;
+}
+
+.accordion-item{
+    border-bottom: 1px solid var(--light-grayish-blue);
+    padding: 1px 0;
+}
+
+.item-header{
+    padding: 0px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.title{
+    font-weight: bold;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.title:hover{
+    font-weight: 600;
+    color: var(--soft-red);
+}
+
+.text{
+    color: #888;
+    padding: 0 6px;
+    max-height: 0;
+    overflow: hidden;
+    
+}
+
+.icon{
+    transition: 400ms ;
+}
+
+.accordion-item.active .text{
+    max-height: 600px;
+}
+
+.accordion-item.active .title{
+    color: black;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.accordion-item.active .icon{
+    transform: rotate(180deg);
+    transition: 400ms ;
+}
+
+
+#cube.on{
+    position: absolute;
+    top: 230px;
+    left: -120px;
+    z-index: 3;
+}
+
+.container.on{
+    width: 1008px;
+    height: 60%;
+    background-color: white;
+    position: absolute;
+    border-radius: 25px;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-auto-columns: 1fr;
+    z-index: 0;
+    box-shadow: 0px 33px 30px -16px rgba(0,0,0,0.45);
+}
+
+
+
+
+@media (max-width: 1100px){
+    #back, #woman, #cube{
+        display: none;
+    }
+
+    #back-mobile{
+        position: absolute;
+        display: block;
+        top: 9%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #woman-mobile{
+        position: absolute;
+        display: block;
+        top: -2%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 80%;
+        height: 75%;
+        width: 87%;
+        top: 55%;
+    }
+
+    .container.on{
+        width: 87%;
+        height: 75%;
+        top: 55%;
+        left: 50%;
+    }
+
+    .container-text{
+        grid-column: 1;
+        grid-row: 2;
+        justify-content: center;
+    }
+
+    .container-hidden{
+        display: none;
+    }
+
+    .container-img{
+        grid-column: 1;
+        grid-row: 1;
+        display: block;
+        
+    }
+
+    .item-header{
+        padding: 0px 5px;
+    }
+
+    .accordion{
+        margin-top: 12px;
+        font-size: 11px;
+        max-width: 400px;
+        padding: 0px 20px;
+    }
+
+    .accordion-item.active .title{
+        font-size: 14px;
+    }
+
+    .accordion-item.active .text{
+        max-height: 600px;
+        padding: 1px 0px;
+    }
+
+    .text{
+        padding: 0px 2px;
+    }
+
+    .FAQ{
+        padding: 0px;
+        position: relative;
+        left: 50%;
+        transform: translate(-6%, -50%);
+    }
+}
