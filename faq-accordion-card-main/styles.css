@@ -185,15 +185,15 @@ body, html{
         display: block;
         top: 9%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-51%, -50%);
     }
 
     #woman-mobile{
         position: absolute;
         display: block;
         top: -2%;
-        left: 45%;
-        transform: translate(-50%, -50%);
+        left: 50%;
+        transform: translate(-57%, -50%);
     }
 
     .container{
@@ -257,6 +257,8 @@ body, html{
         padding: 0px;
         position: relative;
         left: 50%;
-        transform: translate(-6%, -50%);
+        transform: translate(-9%, -50%);
+        font-weight: 900;
+        font-size: xx-large;
     }
 }
